@@ -1,0 +1,392 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled2.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyN/P6KmKIsTTqnn0hiPocgy",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Hagen320/TrabajosProgramacionAplicada/blob/main/Trabajos%20de%20retos%20en%20Phyton\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 41,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IWEWl-1LLFF1",
+        "outputId": "40ba06e0-e0b5-40ef-bd1d-9f69a909163e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "98\n",
+            "el numero 98 se encuentra en un intervalo entre 50 y 100\n"
+          ]
+        }
+      ],
+      "source": [
+        "#RETO #6 \"Vi en la solucion como hallar un numero random\"\n",
+        "import random as rdm\n",
+        "Numero = rdm.randrange(120)\n",
+        "print(Numero)\n",
+        "if Numero < 10: \n",
+        "  print(\"El numero \", Numero ,\"es menor que 10\")\n",
+        "elif Numero < 50:\n",
+        "  print(\"el numero\",Numero,\"se encuentra en un intervalo entre 10 y 50\")\n",
+        "elif Numero < 100:\n",
+        "  print(\"el numero\",Numero,\"se encuentra en un intervalo entre 50 y 100\")\n",
+        "elif Numero < 120:\n",
+        "  print(\"el numero\",Numero,\"se encuentra en un intervalo entre 100 y 120\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reto #8\n",
+        "Numeros = [10,11,12,13,14,15,16,17,18,19,20]\n",
+        "x=10\n",
+        "for x in Numeros:\n",
+        "  if x%2 == 0:\n",
+        "    print(\"el numero\", x, \"es par\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "utg_Bz6IL1Kg",
+        "outputId": "0ba2f182-092f-4ed4-cf0e-f0ea15d2a2b1"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "el numero 10 es par\n",
+            "el numero 12 es par\n",
+            "el numero 14 es par\n",
+            "el numero 16 es par\n",
+            "el numero 18 es par\n",
+            "el numero 20 es par\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reto #9 busque en google como hacer que el usuario ingrese un valor, y como pasarlo a entero\n",
+        "Vinicial = input(\"ingrese un valor inicial  \")\n",
+        "Vinicial = int(Vinicial)\n",
+        "Vfinal = input(\"Ingrese un valor final  \")\n",
+        "Vfinal = int(Vfinal)\n",
+        "Intervalo = input (\"De cada cuanto quiere que recorra los numeros  \")\n",
+        "Intervalo = int(Intervalo)\n",
+        "Sumatoria = 0\n",
+        "for x in range(Vinicial, Vfinal, Intervalo):\n",
+        "  Sumatoria += x\n",
+        "  print(x)\n",
+        "\n",
+        "print(\"la sumatoria es\", Sumatoria)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UEIhEhNmP7NA",
+        "outputId": "a7e2c6aa-e1d3-40a0-f526-4ccaa6c38410"
+      },
+      "execution_count": 46,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ingrese un valor inicial  3\n",
+            "Ingrese un valor final  5\n",
+            "De cada cuanto quiere que recorra los numeros  1\n",
+            "3\n",
+            "4\n",
+            "la sumatoria es 7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reto #10\n",
+        "print(\"como un tablero de ajedrez tiene 64 casillas y duplicamos por cada casilla un trigo iniciando en 1\")\n",
+        "Total_trigo = 0\n",
+        "x=0\n",
+        "\n",
+        "for x in range (1,64,1):\n",
+        "  Total_trigo = 2**x\n",
+        "print(\"El trigo que se necesita para la secuencia es:  \",Total_trigo)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bOtDQsOeTVyD",
+        "outputId": "51598ff6-82c1-46e1-ebd2-52fc7c198c1c"
+      },
+      "execution_count": 68,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "como un tablero de ajedrez tiene 64 casillas y duplicamos por cada casilla un trigo iniciando en 1\n",
+            "El trigo que se necesita para la secuencia es:   9223372036854775808\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reto #13\n",
+        "Numero1 = input(\"Escriba el primer Numero  \")\n",
+        "Numero1 = int(Numero1)\n",
+        "Numero2 = input(\"Escriba el segundo numero  \")\n",
+        "Numero2 = int(Numero2)\n",
+        "\n",
+        "Suma = Numero1 + Numero2\n",
+        "Media = Suma/2\n",
+        "\n",
+        "print(\"La media de los dos numeros es:  \",Media)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2uSXVSvOXXcc",
+        "outputId": "561f26b1-7039-44ef-9b0c-e4c34b38576d"
+      },
+      "execution_count": 69,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escriba el primer Numero  15\n",
+            "Escriba el segundo numero  10\n",
+            "La media de los dos numeros es:   12.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reto #15\n",
+        "n = int(input(\"Escriba el numero de datos:  \"))\n",
+        "i=0\n",
+        "sumatoria = 0\n",
+        "while i < n:\n",
+        "  i+=1\n",
+        "  x = int(input(\"escriba el dato \"))\n",
+        "  sumatoria += x\n",
+        "\n",
+        "media = sumatoria/n\n",
+        "print(\"La media de los datos ingresados es: \",media)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wvAa4F-4YVr6",
+        "outputId": "2a81f050-363e-430f-b52c-098e738c7ad5"
+      },
+      "execution_count": 80,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escriba el numero de datos:  4\n",
+            "escriba el dato # 2\n",
+            "escriba el dato # 4\n",
+            "escriba el dato # 3\n",
+            "escriba el dato # 7\n",
+            "La media de los datos ingresados es:  4.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reto #17\n",
+        "import random as rdm\n",
+        "Aleatorio = rdm.randrange(100)\n",
+        "Adivina = int(input(\"Adivina el numero aleatorio: \"))\n",
+        "if Adivina == Aleatorio:\n",
+        "  print(\"Es correcto has adivinado GANASTE\")\n",
+        "while Adivina != Aleatorio:\n",
+        "  while Adivina > Aleatorio: \n",
+        "    Adivina = int(input(\"El numero aleatorio es menor, Ingresa otro numero: \"))\n",
+        "    if Adivina == Aleatorio:\n",
+        "      print(\"Es correcto has adivinado GANASTE\")\n",
+        "  while Adivina < Aleatorio: \n",
+        "    Adivina = int(input(\"El numero aleatorio es mayor, Ingresa otro numero: \"))\n",
+        "    if Adivina == Aleatorio:\n",
+        "      print(\"Es correcto has adivinado GANASTE\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B50M5jSubGQW",
+        "outputId": "3234fc04-1bd8-41c6-ad4c-dbe1e43f0d33"
+      },
+      "execution_count": 85,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Adivina el numero aleatorio: 50\n",
+            "El numero aleatorio es menor, Ingresa otro numero: 20\n",
+            "El numero aleatorio es menor, Ingresa otro numero: 10\n",
+            "El numero aleatorio es mayor, Ingresa otro numero: 15\n",
+            "El numero aleatorio es mayor, Ingresa otro numero: 17\n",
+            "Es correcto has adivinado GANASTE\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reto #20 Busque en google que era un año bisiesto\n",
+        "Año = int(input(\"ingrese el año que desee saber si es bisiesto: \"))\n",
+        "Bisiesto = Año%4\n",
+        "if Bisiesto == 0: \n",
+        "  print(\"el año \", Año, \" es bisiesto\")\n",
+        "elif Bisiesto != 0:\n",
+        "  print(\"El año\", Año, \" no es bisiesto\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wKisveT5h8Ld",
+        "outputId": "18980094-815c-497c-a5ff-0b64d2f71613"
+      },
+      "execution_count": 88,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ingrese el año que desee saber si es bisiesto: 2018\n",
+            "El año 2018  no es bisiesto\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reto #26\n",
+        "import random as rdm\n",
+        "Numero = rdm.randrange(1000000,2000000)\n",
+        "print(Numero)\n",
+        "i=0\n",
+        "while i < 7:\n",
+        "  PeI = Numero%10\n",
+        "  Numero = int(Numero/10)\n",
+        "  if PeI%2 == 0:\n",
+        "    print(\"El numero \", PeI, \" es par\")\n",
+        "  elif PeI%2 == 1:\n",
+        "    print(\"El numero \", PeI, \" es inpar\")\n",
+        "  i+=1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-sUWQNQHjl3h",
+        "outputId": "71914ec2-6170-4611-98a2-6426de517733"
+      },
+      "execution_count": 96,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1023867\n",
+            "El numero  7  es inpar\n",
+            "El numero  6  es par\n",
+            "El numero  8  es par\n",
+            "El numero  3  es inpar\n",
+            "El numero  2  es par\n",
+            "El numero  0  es par\n",
+            "El numero  1  es inpar\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Reto #27 Me guie de la solución para crear bien la lista\n",
+        "import random as rdm\n",
+        "Lista =[]\n",
+        "i=0\n",
+        "x=0\n",
+        "while i < 10:\n",
+        "  x = rdm.randrange(1,100)\n",
+        "  Lista.append(x)\n",
+        "  i += 1\n",
+        "print(Lista)\n",
+        "print(\"El numero maximo de la lista es: \", max(Lista))\n",
+        "print(\"El numero menor de la lista es: \", min(Lista))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OSD118NxlcbO",
+        "outputId": "085a19b3-5016-40b7-a824-752727b0c790"
+      },
+      "execution_count": 103,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[19, 90, 84, 52, 29, 84, 61, 25, 40, 78]\n",
+            "El numero maximo de la lista es:  90\n",
+            "El numero menor de la lista es:  19\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
